@@ -7,11 +7,13 @@ import Footer from './components/Footer';
 import { Route, Routes } from 'react-router-dom';
 import Test from './pages/Test';
 import ABC from './pages/ABC';
+import { Container } from 'reactstrap';
+
 
 
 const DefaultMain = () => {
     return ( 
-        <div>
+        <Container>
             <MenuSV/>
 
             <SearchBar/>
@@ -22,7 +24,7 @@ const DefaultMain = () => {
             </Routes>
             
             <Footer/>
-        </div>
+        </Container>
      );
 }
  
