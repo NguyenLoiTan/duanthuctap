@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Form } from "reactstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MenuLogin from './MenuLogin';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [role, setRole] = useState('');
@@ -84,7 +85,7 @@ const Login = () => {
                 Ghi nhớ mật khẩu
               </label>
               
-              <a href="/forgot-password" style={{ marginLeft:"45%", fontSize: '14px',color: "rgba(242, 109, 33, 1)"}}>Quên mật khẩu?</a>
+              <Link to="/forgotPassword" style={{ marginLeft:"45%", fontSize: '14px',color: "rgba(242, 109, 33, 1)"}}>Quên mật khẩu?</Link>
             
             </div>
             <div style={{ marginBottom: '24px' }}>
