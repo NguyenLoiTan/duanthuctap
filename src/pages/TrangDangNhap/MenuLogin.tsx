@@ -8,7 +8,7 @@ const MenuLogin = () => {
       marginTop: 30 
     }}>
       <Row className="align-items-center">
-        <Col xs={12} md={6} className="text-center">
+        <Col xs={12} md={6} >
           <img src="/assets/img/iconMenu.png" alt="menu" />
         </Col>
         <Col xs={12} md={6} className="text-center mt-4 mt-md-0">
