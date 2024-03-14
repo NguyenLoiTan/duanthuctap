@@ -1,8 +1,8 @@
 import React from 'react';
-import { Container, Row, Col, FormGroup, Label, Input, Form } from "reactstrap";
+import {  Row, Col, FormGroup, Label, Input, Form } from "reactstrap";
 import { Link, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MenuLogin from './MenuLogin';
+
 
 const ForgotPassword = () => {
     const navigate = useNavigate();
@@ -14,8 +14,7 @@ const ForgotPassword = () => {
     };
 
     return (
-        <Container>
-            <MenuLogin />
+        <div style={{margin:'0px 90px'}}>
             <h1 style={{ marginTop: 96, fontFamily: 'Roboto', color: "rgba(242, 109, 33, 1)" }}>Đăng nhập</h1>
             <p>Vui lòng nhập địa chỉ email đã đăng kí để yêu cầu khôi phục lại mật khẩu</p>
             <Row>
@@ -52,7 +51,7 @@ const ForgotPassword = () => {
                     <img src="/assets/img/Join_Us.png" alt="logo" />
                 </Col>
             </Row>
-        </Container>
+        </div>
     );
 }
 

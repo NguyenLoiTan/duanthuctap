@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
-import MenuSV from '../../components/MenuSV';
+import { Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import Footer from '../../components/Footer';
 import './styles.css';
 
@@ -20,8 +19,7 @@ const RegisterPageDN: React.FC = () => {
   }, 10000);
 
   return (
-    <Container>
-      <MenuSV/>
+    <div style={{margin:'0px 90px'}}>
       <h1 style={{ marginTop: 96, fontFamily: 'Roboto', color: "rgba(242, 109, 33, 1)" }}>Đăng ký</h1>
       <Form onSubmit={handleSubmit}>
         <Row>
@@ -88,7 +86,7 @@ const RegisterPageDN: React.FC = () => {
         </div>
       )}
       <Footer/>
-    </Container>
+    </div>
   );
 };
 

@@ -7,26 +7,27 @@ import Footer from './components/Footer';
 import { Route, Routes } from 'react-router-dom';
 import Test from './pages/Test';
 import ABC from './pages/ABC';
-import { Container } from 'reactstrap';
 import CardGroups from './components/CardGroup';
 
 
 
 const DefaultMain = () => {
     return ( 
-        <Container>
-            <MenuSV/>
+        <>
+        <MenuSV/>
 
-            <SearchBar/>
-            <CardGroups/>
-            <Routes>
-                <Route path='/test' element={<Test/>}></Route>
-                <Route path='/ABC' element={<ABC/>}></Route>
-                
-            </Routes>
+<SearchBar/>
+<CardGroups/>
+<Routes>
+    <Route path='/test' element={<Test/>}></Route>
+    <Route path='/ABC' element={<ABC/>}></Route>
+    
+</Routes>
+
+<Footer/>
+        </>
             
-            <Footer/>
-        </Container>
+        
      );
 }
  

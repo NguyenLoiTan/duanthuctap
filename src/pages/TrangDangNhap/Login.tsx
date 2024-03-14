@@ -1,7 +1,6 @@
 import React from 'react';
-import { Container, Row, Col, Form, FormGroup, Label, Input } from "reactstrap";
+import { Row, Col, Form, FormGroup, Label, Input } from "reactstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MenuLogin from './MenuLogin';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
@@ -10,8 +9,7 @@ const Login = () => {
 
 
   return (
-    <Container>
-      <MenuLogin/>
+    <div style={{margin:'0px 90px'}}>
       <h1 style={{ marginTop: 96, fontFamily: 'Roboto', color: "rgba(242, 109, 33, 1)" }}>Đăng nhập</h1>
       <Row>
         <Col xs={12} md={6}>
@@ -74,7 +72,7 @@ const Login = () => {
           <img src="/assets/img/Join_Us.png" alt="logo" />
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 };
 
