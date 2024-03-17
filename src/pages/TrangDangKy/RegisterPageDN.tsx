@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
-import Footer from '../../components/Footer';
 import './styles.css';
 
 const RegisterPageDN: React.FC = () => {
@@ -85,7 +84,6 @@ const RegisterPageDN: React.FC = () => {
           </div>
         </div>
       )}
-      <Footer/>
     </div>
   );
 };

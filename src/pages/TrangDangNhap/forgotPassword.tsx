@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const ForgotPassword = () => {
+    const imgJoninUs = 'https://firebasestorage.googleapis.com/v0/b/testthuctap-d830b.appspot.com/o/Join_Us.png?alt=media&token=c465030c-d3f1-4f7f-befc-2c6c83527aef'
     const navigate = useNavigate();
 
     const handleLogin = () => {
@@ -48,7 +49,7 @@ const ForgotPassword = () => {
                     </Form>
                 </Col>
                 <Col xs={12} md={6} className="text-center mt-4 mt-md-0">
-                    <img src="/assets/img/Join_Us.png" alt="logo" />
+                    <img src={imgJoninUs} alt="logo" />
                 </Col>
             </Row>
         </div>

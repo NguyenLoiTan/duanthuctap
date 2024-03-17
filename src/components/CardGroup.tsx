@@ -2,6 +2,8 @@ import React from 'react';
 import { Card, CardBody,  CardText, Row, Col, Button } from 'reactstrap';
 
 const CardGroups: React.FC = () => {
+  const downdloadIcon ='https://firebasestorage.googleapis.com/v0/b/testthuctap-d830b.appspot.com/o/IconDownload.png?alt=media&token=f684c605-e3df-4f01-a913-25fa424453dd'
+  const cardIcon = 'https://firebasestorage.googleapis.com/v0/b/testthuctap-d830b.appspot.com/o/CardIcon.png?alt=media&token=42f1c9c2-9139-4546-aa73-17214c1009ad'
   return (
     <div style={{margin:'0px 90px'}}>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center',margin:'50px 0px' }}>
@@ -17,7 +19,7 @@ const CardGroups: React.FC = () => {
               <Row >
                 <Col xs="10">
                   <div style={{ display: 'flex', alignItems: 'center' }}>
-                  <img src="/assets/img/CardIcon.png" alt="" style={{ width: '50px', height: '50px', marginRight: '10px' }} />
+                  <img src={cardIcon} alt="" style={{ width: '50px', height: '50px', marginRight: '10px' }} />
                   <div>
                       <h4 style={{ margin: '0' }}>
                           {/* Thiết kế UI/UX (Figma) */}
@@ -32,7 +34,7 @@ const CardGroups: React.FC = () => {
                 </Col>
 
                 <Col xs="1" >
-                  <Button style={{backgroundColor:'rgba(242, 109, 33, 1)',border: 'none'}}><img src="/assets/img/IconDownload.png" alt="search" /></Button>
+                  <Button style={{backgroundColor:'rgba(242, 109, 33, 1)',border: 'none'}}><img src={downdloadIcon} alt="search" /></Button>
                 </Col>
               </Row>
               <Row>

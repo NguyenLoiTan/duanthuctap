@@ -1,13 +1,13 @@
-import Login from "./Login";
-import MenuLogin from "./MenuLogin";
+import MenuThi from "./MenuThi";
+import TaoDeThi from "./TaoDeThi";
 
-const TrangDangNhap = () => {
+const TrangTaoDeThi = () => {
     return ( 
         <div style={{ backgroundColor: 'rgba(241, 243, 245, 1)', width: '100%', height: '100vh', display: 'flex', flexDirection: 'column' }}>
-            <MenuLogin/>
-            <Login/>
+            <MenuThi />
+            <TaoDeThi />
         </div>
      );
 }
  
-export default TrangDangNhap;
+export default TrangTaoDeThi;

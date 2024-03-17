@@ -1,11 +1,14 @@
 import { Button, Input } from "reactstrap";
-import MenuThi from "./MenuThi";
 
 const TaoDeThi = () => {
     return ( 
         <div>
-            <MenuThi/>
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '50px 0px' }}>
+            <div style={{
+            display: 'flex',
+            marginTop: '40px',
+            alignItems: 'center', 
+            flexDirection: 'column',
+        }}>
                 <h2 style={{ textAlign: 'center' }}>
                     Xin chào <span style={{ color: 'rgba(242, 109, 33, 1)' }}>NGUYỄN TẤN LỢI</span>
                 </h2>
