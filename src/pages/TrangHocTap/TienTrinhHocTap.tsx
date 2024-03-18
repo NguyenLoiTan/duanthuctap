@@ -74,7 +74,7 @@ const TienTrinhHocTap = () => {
             </FormGroup>
             <FormGroup>
               <Label for="school"><strong>Link file</strong></Label>
-              <Input type="email" name="school" id="school" value={school} onChange={handleSchoolChange} style={{ width: '524px', height: '48px', padding: '10px 16px' }} placeholder="Nhập trường đang học" />
+              <Input type="text" name="school" id="school" value={school} onChange={handleSchoolChange} style={{ width: '524px', height: '48px', padding: '10px 16px' }} placeholder="Nhập trường đang học" />
               {schoolError && <span style={{ color: 'red' }}>{schoolError}</span>}
             </FormGroup>
             <FormGroup>
@@ -113,7 +113,7 @@ const TienTrinhHocTap = () => {
                 }}>Đóng</button>
               </div>
             </div>
-          )}
+            )}
         </div>
      );
 }

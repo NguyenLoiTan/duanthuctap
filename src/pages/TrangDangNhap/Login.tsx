@@ -78,9 +78,9 @@ const Login = () => {
       } else {
         // Kiểm tra role và chuyển hướng đến trang tương ứng
         if (role === "Doanh nghiệp") {
-          navigate("/neko");
+          navigate("/JD");
         } else if (role === "Sinh viên") {
-          navigate("/");
+          navigate("/TrangTaoDeThi");
         }
       }
     }

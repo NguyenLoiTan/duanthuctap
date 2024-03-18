@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Input } from 'reactstrap';
 
 interface ExerciseQuestion {
   id: number;
@@ -11,15 +12,15 @@ const CauHoi: React.FC = () => {
   const [exerciseQuestions] = useState<ExerciseQuestion[]>([
     {
       id: 1,
-      question: 'What is the capital of France?',
-      options: ['London', 'Paris', 'Berlin', 'Madrid'],
-      correctAnswer: 'Paris'
+      question: 'Sum = 24 + 56 + 72 + 82.Trong trường hợp trên Sum là:',
+      options: ['A. Letter.', 'B. Integer.', 'C. Number.', 'D. Character.'],
+      correctAnswer: 'A. Letter.'
     },
     {
       id: 2,
-      question: 'What is 2 + 2?',
-      options: ['3', '4', '5', '6'],
-      correctAnswer: '4'
+      question: 'Thẻ div có style background-color: red có tác dụng gì?',
+      options: ['A. Thay đổi màu nền thành đỏ.', 'B. Báo lỗi', 'C. Không tác dụng', 'D. Thay đổi màu chữ thành đỏ.'],
+      correctAnswer: 'A. Thay đổi màu nền thành đỏ.'
     },
   ]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
@@ -37,14 +38,18 @@ const CauHoi: React.FC = () => {
 
   return (
     <div style={{ margin: '0px 200px', position: 'relative',flexDirection: 'column'}}>
-      <h5>Exercise Page</h5>
+      
       {currentQuestion && (
         <div>
-          <h3>{currentQuestion.question}</h3>
+          <h5>Câu {currentQuestion.id}:</h5>
+          <p>{currentQuestion.question}</p>
             {currentQuestion.options.map(option => (
               <div key={option} style={{ width: '633px', height: '50px', padding: '10px 16px', gap: '12px', borderRadius: '8px', backgroundColor: 'white', marginBottom:16 }}>
                 <label>
-                  <input type="radio" name="answer" value={option} />
+                  <Input type="radio" name="answer" value={option} style={{
+                    border: '2px solid orange',width: '20px',height: '20px',
+                    borderRadius: '4px',marginRight: '8px',cursor: 'pointer',
+                    }}/>
                   {option}
                 </label>
               </div>
@@ -53,10 +58,10 @@ const CauHoi: React.FC = () => {
       )}
       <div>
         <button onClick={goToPreviousQuestion} disabled={currentQuestionIndex === 0}>
-          Previous
+          Câu trước
         </button>
         <button onClick={goToNextQuestion} disabled={currentQuestionIndex === exerciseQuestions.length - 1}>
-          Next
+          Câu tiếp theo
         </button>
       </div>
     </div>
