@@ -10,7 +10,7 @@ const SearchBar = () => {
       flexDirection: 'column',
       justifyContent: 'center', // Để căn giữa theo chiều ngang
       backgroundColor:'white',
-      height: '100vh', // Chiếm toàn bộ chiều cao của màn hình
+       // Chiếm toàn bộ chiều cao của màn hình
     }}>
       <Row style={{ display: 'flex', justifyContent: 'center' }}> {/* Thêm style để sử dụng flexbox */}
         <Col xs={12} md={4} style={{ padding: 0, flex: 1 }}> {/* Thêm style để xóa padding và sử dụng flexbox */}
