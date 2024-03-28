@@ -27,7 +27,7 @@ const LamBaiThi = () => {
                 flexDirection: 'column',
             }}>
                 <h5 >Đề thi môn</h5>
-                <h2 >Lập trình Back-end</h2>
+                <h2 >Lập trình Front end</h2>
             </div>
 
             <div style={{

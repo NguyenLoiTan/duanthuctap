@@ -5,13 +5,17 @@ import { Col, Row } from 'reactstrap';
 const MenuDN = () => {
   const imageUrl = 'https://firebasestorage.googleapis.com/v0/b/testthuctap-d830b.appspot.com/o/iconMenu.png?alt=media&token=d9ef1c46-79eb-4885-bacd-c5e13aed6733';
   const [page, setPage] = useState('');
+  const [userImage, setUserImage] = useState('DNIcon2.png');
+  const [dkImage, setDkImage] = useState('IconDN.png');
   useEffect(() => {
   const path = window.location.pathname;
 
   if (path === '/JD') {
       setPage('JD');
+      setUserImage('DNIcon.png')
   } else if (path === '/TrangDangKyDN') {
       setPage('Register');
+      setDkImage('IconDN2.png'); 
   }
 }, []);
   return (
@@ -30,7 +34,7 @@ const MenuDN = () => {
               }}
               
             >
-              <img src="/assets/img/DNIcon.png" alt="icon" />
+              <img src={`/assets/img/${userImage}`} alt="icon" />
               <span style={{ marginLeft: 5 }}>Tìm kiếm việc làm</span>
             </Link>
           </div>
@@ -47,7 +51,7 @@ const MenuDN = () => {
               }}
              
             >
-              <img src="/assets/img/IconDN.png" alt="icon" />
+              <img src={`/assets/img/${dkImage}`} alt="icon" />
               <span style={{ marginLeft: 5 }}>Doanh nghiệp đăng ký</span>
             </Link>
           </div>

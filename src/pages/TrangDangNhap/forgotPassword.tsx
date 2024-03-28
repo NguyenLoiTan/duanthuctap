@@ -23,7 +23,7 @@ const ForgotPassword = () => {
                     <Form>
                         <FormGroup>
                             <Label for="email"><strong>Email</strong><span style={{ color: "rgba(255, 71, 71, 1)" }}>*</span></Label>
-                            <Input type="email" name="email" id="email" style={{ width: '524px', height: '48px', padding: '10px 16px' }} />
+                            <Input type="email" name="email" id="email" placeholder='Nhập email của bạn' style={{ width: '524px', height: '48px', padding: '10px 16px' }} />
                         </FormGroup>
 
                         <div>

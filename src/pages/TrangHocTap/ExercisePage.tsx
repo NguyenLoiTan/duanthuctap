@@ -71,12 +71,12 @@ const ExercisePage: React.FC = () => {
           ))}
         </div>
       )}
-      <div>
-        <button onClick={goToPreviousQuestion} disabled={currentQuestionIndex === 0}>
-          Previous
+      <div style={{ position: 'absolute', right: 0 }}>
+        <button onClick={goToPreviousQuestion} disabled={currentQuestionIndex === 0} style={{ background: 'transparent', border: 'none' }}>
+          <img src="/assets/img/IconP.png" alt="" />
         </button>
-        <button onClick={goToNextQuestion} disabled={currentQuestionIndex === exerciseQuestions.length - 1}>
-          Next
+        <button onClick={goToNextQuestion} disabled={currentQuestionIndex === exerciseQuestions.length - 1} style={{ background: 'transparent', border: 'none' }}>
+          <img src="/assets/img/IconN.png" alt="" />
         </button>
       </div>
     </div>

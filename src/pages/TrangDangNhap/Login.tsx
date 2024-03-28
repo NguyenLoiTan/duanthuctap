@@ -103,24 +103,19 @@ const Login = () => {
             </FormGroup>
             <FormGroup>
               <Label for="email"><strong>Email</strong><span style={{ color: "rgba(255, 71, 71, 1)" }}>*</span></Label>
-              <Input type="email" name="email" id="email" value={email} onChange={handleEmailChange} style={{ width: '524px', height: '48px', padding: '10px 16px' }} />
+              <Input type="email" name="email" id="email" value={email} placeholder='Tên đăng nhập' onChange={handleEmailChange} style={{ width: '524px', height: '48px', padding: '10px 16px' }} />
               {emailError && <span style={{ color: 'red' }}>{emailError}</span>}
             </FormGroup>
             <FormGroup>
               <Label for="password"><strong>Mật khẩu</strong><span style={{ color: "rgba(255, 71, 71, 1)" }}>*</span></Label>
-              <Input type="password" name="password" id="password" value={password} onChange={handlePasswordChange} style={{ width: '524px', height: '48px', padding: '10px 16px' }} />
+              <Input type="password" name="password" id="password" value={password} placeholder='Nhập mật khẩu' onChange={handlePasswordChange} style={{ width: '524px', height: '48px', padding: '10px 16px' }} />
               {passwordError && <span style={{ color: 'red' }}>{passwordError}</span>}
             </FormGroup>
-            <div style={{ marginBottom: '24px' }}>
-              <label>
-                <input
-                  type="checkbox"
-                />
-                Ghi nhớ mật khẩu
-              </label>
-
+            <FormGroup>
+              <Input type="checkbox" name="password" id="password"/>
+              <Label for='checkbox'>Ghi nhớ mật khẩu</Label>
               <Link to="/forgotPassword" style={{ marginLeft: "45%", fontSize: '14px', color: "rgba(242, 109, 33, 1)" }}>Quên mật khẩu?</Link>
-            </div>
+            </FormGroup>
             <FormGroup>
               <ReCAPTCHA
                 sitekey="6LfLVJspAAAAADaK4CrW5n9or0lUl7n1ljZJau9W"

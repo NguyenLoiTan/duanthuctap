@@ -2,63 +2,70 @@ import { useState } from "react";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import './styles.css';
 
-
 const TienTrinhHocTap = () => {
     const [role, setRole] = useState<string>('none');
-    const [roleError, setRoleError] = useState<string>('');
     const [school, setSchool] = useState<string>('');
-    const [schoolError, setSchoolError] = useState<string>('');
     const [baocao, setBaoCao] = useState<string>('');
-    const [baocaoError, setBaoCaoError] = useState<string>('');
-    const [showAlert, setShowAlert] = useState(false); // State để điều khiển việc hiển thị của bảng thông báo
-    const [showOverlay, setShowOverlay] = useState(false); // State để điều khiển hiển thị màn hình khi thông báo
+    const [showAlert, setShowAlert] = useState(false); 
+    const [showOverlay, setShowOverlay] = useState(false); 
 
     const handleRoleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { value } = event.target;
         setRole(value);
-        validateRole(value);
       };
-      const validateRole = (value: string) => {
-        if (value === 'none') {
-          setRoleError('Vui lòng Chọn lớp / Chọn nhóm thực tập.');
-        } else {
-          setRoleError('');
-        }
-      };
-      const validateSchool = (value: string) => {
-        if (!value) {
-          setSchoolError('Vui lòng nhập trường đang học.');
-        } else {
-          setSchoolError('');
-        }
-      };
-      const validateBaoCao = (value: string) => {
-        if (!value) {
-          setBaoCaoError('Vui lòng nhập báo cáo.');
-        } else {
-          setBaoCaoError('');
-        }
-      };
+      
       const handleSchoolChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { value } = event.target;
         setSchool(value);
-        validateSchool(value);
       };
+      
       const handleBaoCaoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { value } = event.target;
         setBaoCao(value);
-        validateBaoCao(value);
       };
+      
       const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setShowAlert(true); // Hiển thị bảng thông báo khi submit form
-        setShowOverlay(true);
+        if(validateForm()) {
+          setShowAlert(true); 
+          setShowOverlay(true);
+          setTimeout(() => {
+            setShowAlert(false);
+            setShowOverlay(false);
+          }, 10000);
+        }
       };
-      // Đặt thời gian để tự động ẩn thông báo sau 10 giây
-      setTimeout(() => {
-        setShowAlert(false);
-        setShowOverlay(false);
-      }, 10000);
+
+      const validateForm = () => {
+        let isValid = true;
+        if (role === 'none') {
+          setRoleError('Vui lòng chọn lớp / chọn nhóm thực tập.');
+          isValid = false;
+        } else {
+          setRoleError('');
+        }
+
+        if (!school) {
+          setSchoolError('Vui lòng nhập trường đang học.');
+          isValid = false;
+        } else {
+          setSchoolError('');
+        }
+
+        if (!baocao) {
+          setBaoCaoError('Vui lòng nhập nội dung báo cáo.');
+          isValid = false;
+        } else {
+          setBaoCaoError('');
+        }
+
+        return isValid;
+      };
+
+      const [roleError, setRoleError] = useState<string>('');
+      const [schoolError, setSchoolError] = useState<string>('');
+      const [baocaoError, setBaoCaoError] = useState<string>('');
+
     return ( 
         <div style={{ margin: '50px 0px 0px 200px', position: 'relative',flexDirection: 'column'}}>
             <h3>Xin chào <span style={{color:'rgba(242, 109, 33, 1)'}}>NGUYỄN TẤN LỢI</span></h3>

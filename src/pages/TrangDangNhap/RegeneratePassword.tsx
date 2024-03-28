@@ -27,11 +27,11 @@ const RegeneratePassword: React.FC = () => {
             <Form onSubmit={handleSubmit}>
             <FormGroup>
               <Label for="password"><strong>Mật khẩu mới</strong><span style={{color:"rgba(255, 71, 71, 1)"}}>*</span></Label>
-              <Input type="password" name="password" id="password" style={{width: '524px',height: '48px',padding: '10px 16px'}}/>
+              <Input type="password" name="password" id="password" placeholder='Nhập mật khẩu mới' style={{width: '524px',height: '48px',padding: '10px 16px'}}/>
             </FormGroup>
             <FormGroup>
               <Label for="newpassword"><strong>Nhập lại mật khẩu mới</strong><span style={{color:"rgba(255, 71, 71, 1)"}}>*</span></Label>
-              <Input type="password" name="newpassword" id="newpassword" style={{width: '524px',height: '48px',padding: '10px 16px'}}/>
+              <Input type="password" name="newpassword" id="newpassword" placeholder='Nhập lại mật khẩu mới' style={{width: '524px',height: '48px',padding: '10px 16px'}}/>
             </FormGroup>
             <Button style={{ width: '524px',height: '48px',padding: '10px 16px',borderRadius: '8px',backgroundColor: "rgba(242, 109, 33, 1)",color: "white",border:"none"}} type="submit">
               Xác nhận
